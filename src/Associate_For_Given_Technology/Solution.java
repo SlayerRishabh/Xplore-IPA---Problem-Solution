@@ -16,7 +16,6 @@ public class Solution {
 
         Associate[] result= associatesForGivenTechnology(associates,searchTechnology);
 
-
         for (int i = 0; i < result.length; i++) {
             System.out.println(result[i].getId());
         }

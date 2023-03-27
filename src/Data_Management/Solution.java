@@ -43,21 +43,22 @@ public class Solution {
                 sumOfPrice += phones[i].getPrice();
             }
         }
-
-        if (sumOfPrice > 0)
-            return sumOfPrice;
-        else
-            return 0;
+        return sumOfPrice;
+        //No need to check condition because if condition is false then sumOfPrice will be automatically 0 hence 0 will be returned
+//        if (sumOfPrice > 0)
+//            return sumOfPrice;
+//        else
+//            return 0;
     }
 
     static Phone getPhoneIdBasedOnOs(Phone phones[], String para_os) {
-        Phone temp = null;
+        //Phone temp = null;
         for (int i = 0; i < phones.length; i++) {
             if(phones[i].getOs().equalsIgnoreCase(para_os) && (phones[i].getPrice() >= 50000)) {
-                temp = phones[i];
+                return phones[i];
             }
         }
-        return temp;
+        return null;
     }
 }
 

@@ -15,6 +15,7 @@ public static void main(String[] args) {
 
         int p_limit = sc.nextInt();
         sc.close();
+        
         Inventory res[] = replenish(inventorys, p_limit);
 
         for(int j = 0; j<res.length; j++) {
@@ -29,13 +30,13 @@ public static void main(String[] args) {
 
 public static Inventory[] replenish(Inventory inventorys[], int p_limit) {
         Inventory r[] = new Inventory[0];
-        for(int i=0; i<inventorys.length; i++) {
-        if(inventorys[i].getThreshold() <= p_limit) {
-        r = Arrays.copyOf(r, r.length+1);
-        r[r.length-1] = inventorys[i];
-        }
-        }
-        return r;
+            for(int i=0; i<inventorys.length; i++) {
+                if(inventorys[i].getThreshold() <= p_limit) {
+                    r = Arrays.copyOf(r, r.length+1);
+                    r[r.length-1] = inventorys[i];
+                }
+            }
+            return r;
         }
 }
 
